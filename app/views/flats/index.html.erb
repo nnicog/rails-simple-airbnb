@@ -1,0 +1,17 @@
+<div class="navbar">
+  <h2>Simple Airbnb</h2>
+  <%= link_to "Add Flat", new_flat_path , class:"btn btn-primary" %>
+</div>
+
+<div class="container">
+  <% @flats.each do |flat| %>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"><%= flat.name %></h5>
+        <p class="card-text"><%= flat.address %></p>
+        <%= flat.number_of_guests %> <%= flat.price_per_night %>
+      </div>
+    </div>
+  <% end  %>
+</div>
+<i class="fas fa-user-friends"></i>
